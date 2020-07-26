@@ -172,6 +172,8 @@ GLOBAL_LIST_EMPTY(uplinks)
 			var/datum/uplink_item/I = uplink_items[category][item]
 			if(I.limited_stock == 0)
 				continue
+			if(I.global_stock == 0)
+				continue
 			if(I.restricted_roles.len)
 				var/is_inaccessible = TRUE
 				for(var/R in I.restricted_roles)

@@ -66,7 +66,8 @@
 	var/refundable = FALSE
 	var/surplus = 100 // Chance of being included in the surplus crate.
 	var/cant_discount = FALSE
-	var/limited_stock = -1 //Setting this above zero limits how many times this item can be bought by the same traitor in a round, -1 is unlimited
+	var/limited_stock = -1 //Setting this above zero limits how many times this item can be bought by the SAME traitor in a round, -1 is unlimited
+	var/global_stock = -1 // Setting this above zero limits how many times this item can be bought by ALL traitors. Buying the item will reduce the stock for everyone.
 	var/list/include_modes = list() // Game modes to allow this item in.
 	var/list/exclude_modes = list() // Game modes to disallow this item from.
 	var/list/restricted_roles = list() //If this uplink item is only available to certain roles. Roles are dependent on the frequency chip or stored ID.
